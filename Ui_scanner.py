@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '/Users/ryanlau/Documents/UnderGraduate/course/program design/project/coreproject/scanner.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.upload = QtWidgets.QFrame(self.centralwidget)
+        self.upload.setGeometry(QtCore.QRect(140, 140, 521, 231))
+        self.upload.setAutoFillBackground(True)
+        self.upload.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.upload.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.upload.setObjectName("upload")
+        self.frame = QtWidgets.QFrame(self.upload)
+        self.frame.setGeometry(QtCore.QRect(0, 170, 521, 61))
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.img = QtWidgets.QRadioButton(self.frame)
+        self.img.setGeometry(QtCore.QRect(30, 20, 100, 20))
+        self.img.setObjectName("img")
+        self.pdf = QtWidgets.QRadioButton(self.frame)
+        self.pdf.setGeometry(QtCore.QRect(210, 20, 100, 20))
+        self.pdf.setObjectName("pdf")
+        self.ocr = QtWidgets.QRadioButton(self.frame)
+        self.ocr.setGeometry(QtCore.QRect(339, 20, 151, 20))
+        self.ocr.setObjectName("ocr")
+        self.select = QtWidgets.QPushButton(self.upload)
+        self.select.setGeometry(QtCore.QRect(380, 30, 113, 32))
+        self.select.setObjectName("select")
+        self.img_path = QtWidgets.QTextBrowser(self.upload)
+        self.img_path.setGeometry(QtCore.QRect(30, 30, 331, 41))
+        self.img_path.setObjectName("img_path")
+        self.dst_path = QtWidgets.QTextBrowser(self.upload)
+        self.dst_path.setGeometry(QtCore.QRect(30, 90, 331, 41))
+        self.dst_path.setObjectName("dst_path")
+        self.dst = QtWidgets.QPushButton(self.upload)
+        self.dst.setGeometry(QtCore.QRect(380, 90, 113, 32))
+        self.dst.setObjectName("dst")
+        self.cancel = QtWidgets.QPushButton(self.centralwidget)
+        self.cancel.setGeometry(QtCore.QRect(220, 410, 113, 32))
+        self.cancel.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.cancel.setObjectName("cancel")
+        self.scan = QtWidgets.QPushButton(self.centralwidget)
+        self.scan.setGeometry(QtCore.QRect(460, 410, 113, 32))
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setWeight(50)
+        font.setStrikeOut(False)
+        self.scan.setFont(font)
+        self.scan.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.scan.setMouseTracking(True)
+        self.scan.setObjectName("scan")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 24))
+        self.menubar.setObjectName("menubar")
+        self.menuscanner = QtWidgets.QMenu(self.menubar)
+        self.menuscanner.setObjectName("menuscanner")
+        MainWindow.setMenuBar(self.menubar)
+        self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.menubar.addAction(self.menuscanner.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.img.setText(_translate("MainWindow", "save images"))
+        self.pdf.setText(_translate("MainWindow", "save pdf"))
+        self.ocr.setText(_translate("MainWindow", "save searchable pdf"))
+        self.select.setText(_translate("MainWindow", "select"))
+        self.dst.setText(_translate("MainWindow", "select"))
+        self.cancel.setText(_translate("MainWindow", "cancel"))
+        self.scan.setText(_translate("MainWindow", "scan"))
+        self.menuscanner.setTitle(_translate("MainWindow", "scanner"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
+
